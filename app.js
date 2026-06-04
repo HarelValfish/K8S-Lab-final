@@ -13,12 +13,15 @@ const movies = [
   { title: 'Interstellar', genre: 'Sci-Fi', year: 2014 },
   { title: 'Goodfellas', genre: 'Crime', year: 1990 },
   { title: 'Fight Club', genre: 'Drama', year: 1999 },
+  { title: 'The Lord of the Rings: The Fellowship of the Ring', genre: 'Fantasy', year: 2001 },
+  { title: 'The Social Network', genre: 'Drama', year: 2010 },
+  { title: 'Spirited Away', genre: 'Animation', year: 2001 },
 ];
 
 app.get('/', (req, res) => {
   const movie = movies[Math.floor(Math.random() * movies.length)];
   res.json({
-    version: 'v1',
+    version: 'v2',
     recommendation: movie,
   });
 });
